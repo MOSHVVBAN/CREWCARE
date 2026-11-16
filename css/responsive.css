@@ -1,0 +1,355 @@
+/* =========================================
+   9. RESPONSIVE DESIGN (TABLET & MOBILE)
+========================================= */
+
+@media (max-width: 1100px) {
+    .guide-topics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .body-map-content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .secondary-systems-column {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+
+    .secondary-systems-column button {
+        flex: 1;
+    }
+
+    .wellness-metrics-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .analytics-grid,
+    .bottom-grid,
+    .check-content-grid,
+    .analytics-main-grid,
+    .alerts-main-grid,
+    .wellness-middle-grid,
+    .body-map-content-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .health-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .wellness-metrics-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .guide-topics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .settings-row-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-section:not(.main-content) {
+        margin-left: 0;
+        padding: 25px 20px;
+    }
+
+    .page-section.main-content,
+    .main-content {
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .main-content > .page-section {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .check-content-grid,
+    .analytics-main-grid,
+    .alerts-main-grid,
+    .wellness-middle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-row-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .body-map-content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .selected-system-card {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Sidebar Drawer on Mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        transform: none;
+        height: 100vh;
+        width: 265px;
+        z-index: 1200;
+        transition: left 0.3s ease;
+        box-shadow: 12px 0 30px rgba(0, 0, 0, 0.55);
+    }
+
+    .sidebar.show {
+        left: 0;
+        transform: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 14px !important;
+    }
+
+    /* Topbar Compact Single-Row Layout */
+    .topbar {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 10px 12px !important;
+        gap: 8px !important;
+    }
+
+    .breadcrumb {
+        font-size: 12px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .topbar-right {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 6px !important;
+        flex-shrink: 0;
+        width: auto !important;
+    }
+
+    .sync-status,
+    .profile div:last-child,
+    #logoutBtn span {
+        display: none !important;
+    }
+
+    .profile {
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .topbar .icon-button,
+    .topbar .profile-avatar,
+    .topbar #logoutBtn,
+    .topbar .mobile-menu {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 10px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 13px !important;
+    }
+
+    /* Welcome & Headers */
+    .welcome-section,
+    .health-check-container,
+    .analytics-header-area,
+    .alerts-header-area,
+    .wellness-header-area,
+    .routine-header-area {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px;
+    }
+
+    .welcome-section h1 {
+        font-size: 22px !important;
+    }
+
+    .welcome-section .primary-button,
+    .save-progress-btn,
+    .record-new-btn,
+    .add-checkin-btn,
+    .add-reminder-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Grids -> Single Column */
+    .health-cards,
+    .wellness-metrics-row,
+    .guide-topics-grid,
+    .quick-actions,
+    .form-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Daily Check Stepper */
+    .steps-indicator {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+    .step-line {
+        display: none !important;
+    }
+
+    /* Analytics & Wellness Tabs Scrollable */
+    .analytics-tabs,
+    .guide-filter-tabs,
+    .trend-tabs,
+    .chart-tabs {
+        overflow-x: auto;
+        max-width: 100%;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .analytics-tab,
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Tables Scrollable */
+    .history-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .history-table {
+        min-width: 560px;
+    }
+
+    /* Routine Completion Card */
+    .daily-completion-card {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 18px;
+    }
+
+    .completion-stats-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Profile Card in Settings */
+    .settings-profile-card {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px;
+    }
+
+    .edit-profile-btn {
+        width: 100%;
+    }
+
+    /* Form Action Buttons */
+    .form-actions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .form-actions button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Modals */
+    .modal {
+        width: 92% !important;
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .step-line {
+        width: 1px;
+        height: 18px;
+        flex: none;
+        margin-left: 16px;
+    }
+
+    .body-graphic-column {
+        min-height: 350px;
+    }
+
+    .secondary-systems-column {
+        flex-direction: column;
+    }
+
+    .completion-left-side {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .completion-stats-right {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .foundational-reading-card {
+        align-items: flex-start;
+    }
+
+    .foundational-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .profile-info-left {
+        align-items: flex-start;
+    }
+
+    .setting-item-group {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .standard-select {
+        width: 100%;
+    }
+
+    .metric-big-value h2 {
+        font-size: 25px;
+    }
+}
