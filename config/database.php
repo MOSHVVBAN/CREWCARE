@@ -1,9 +1,8 @@
 <?php
-// XAMPP defaults. Change these values if your MySQL credentials differ.
-$DB_HOST = 'sql202.infinityfree.com';
-$DB_NAME = 'if0_43438573_crewcare';
-$DB_USER = 'if0_43438573';
-$DB_PASS = 'JuvCz6o3w0Tix';
+$DB_HOST = 'NAME';
+$DB_NAME = 'crewcare';
+$DB_USER = 'USER';
+$DB_PASS = 'your_password';
 
 try {
     $pdo = new PDO(
