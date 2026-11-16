@@ -2,7 +2,7 @@
 
 A health monitoring and medical support web app built for astronauts during space missions where communication delays with Earth can reach over 20 minutes.
 
-Developed by Team **CrewCare** for the **2026 NASA Space Apps Challenge **.
+Developed by Team **CrewCare** for the **2026 NASA Space Apps Challenge**
 
 ---
 
