@@ -38,8 +38,9 @@ During long space missions (ISS, Moon, or Mars), astronauts cannot always wait f
 
 ## Team
 
-- **Mohamed Shaaban** — Team Lead & Full-Stack / AI Developer
-- **Habiba Rashwan**
-- **Asmaa Moawad**
-- **Shahd Konswa**
-- **Shimaa Mostafa**
+- **Mohamed Shaaban** — Team Lead & Machine learning
+- **Maryam saad** - Research
+-  **Shimaa Mostafa** - Frontend
+- **Habiba Rashwan** - Backend
+- **Shahd Konswa** - Frontend
+- **Asmaa Moawad** - Ui
